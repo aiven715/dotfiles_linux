@@ -34,15 +34,6 @@ sudo cp ./config/keyboard /etc/default/ &&
 sudo cp SourceCodePro-Regular.ttf /usr/share/fonts/googlefonts/ &&
 cp wallpaper.jpg ~/Images/ &&
 
-# Apply fonts(TODO: try ignore that as we reboot)
-#sudo fc-cache -fv &&
-
-# Merge .Xresources(TODO: looks like don't need as we reboot anyways)
-#xrdb -merge ~/.Xresources &&
-
-# Set brightness(set manually)
-#xbacklight -set 10
-
 tput setaf 2 &&
 echo "Success" &&
 tput sgr0
