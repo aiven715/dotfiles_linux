@@ -1,5 +1,5 @@
 # Installation
-Download and install Ubuntu net-install .iso and install it without any additional packages.
+Download Ubuntu net-install .iso and install it without any additional packages.
 
 Install git:
   ```
