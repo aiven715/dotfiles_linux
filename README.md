@@ -13,7 +13,7 @@ Clone that repo:
   
 Go to dotfiles:
   ```
-  cd ./dotfiles
+  cd ./dotfiles_linux
   ```
 
 Run `install.sh` and provide your username as an argument:
@@ -28,5 +28,5 @@ Install `wicd`:
 
 Finish installation by removing dotfiles dir and rebooting:
   ```
-  cd ../ && rm -rf ./dotfiles && reboot
+  cd ../ && rm -rf ./dotfiles_linux && reboot
   ```
