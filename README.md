@@ -10,10 +10,15 @@ Clone that repo:
   ```
   git clone git@github.com:aiven715/dotfiles_linux.git
   ```
+  
+Go to dotfiles:
+  ```
+  cd ./dotfiles
+  ```
 
 Run `install.sh` and provide your username as an argument:
   ```
-  sudo ./dotfiles/install.sh your-username
+  sudo ./install.sh your-username
   ```
 
 Install `wicd`:
@@ -23,5 +28,5 @@ Install `wicd`:
 
 Finish installation by removing dotfiles dir and rebooting:
   ```
-  rm -rf ./dotfiles && reboot
+  cd ../ && rm -rf ./dotfiles && reboot
   ```
