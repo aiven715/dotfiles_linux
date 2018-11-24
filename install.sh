@@ -23,7 +23,7 @@ sudo mkdir -p /etc/lightdm &&
 (printf "\n" && cat ./config/.bashrc) >> ~/.bashrc &&
 
 # Append wallpaper path with username
-(printf "[greeter]\nbackground = /home/$USR/Images/wallpaper.jpg\n" && cat ./config/lightdm-gtk-greeter.conf) > /etc/lightdm/lightdm-gtk-greeter.conf &&
+(printf "[greeter]\nbackground = /home/$USR/Images/wallpaper.jpg\n" && cat ./config/lightdm-gtk-greeter.conf) | sudo tee /etc/lightdm/lightdm-gtk-greeter.conf &&
 
 # Copy config files, fonts and wallpaper
 cp ./config/.gtkrc-2.0 ./config/.vimrc ./config/.Xresources ./config/.xprofile ~/ &&
