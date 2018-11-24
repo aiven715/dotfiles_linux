@@ -8,7 +8,7 @@ Install git:
 
 Clone that repo:
   ```
-  git clone git@github.com:aiven715/dotfiles_linux.git
+  git clone https://github.com/aiven715/dotfiles_linux.git
   ```
   
 Go to dotfiles:
