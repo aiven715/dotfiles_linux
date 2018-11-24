@@ -8,12 +8,12 @@ Install git:
 
 Clone that repo:
   ```
-  git clone git@github.com:aiven715/dotfiles_linux.git
+  git clone https://github.com/aiven715/dotfiles_linux.git
   ```
   
 Go to dotfiles:
   ```
-  cd ./dotfiles
+  cd ./dotfiles_linux
   ```
 
 Run `install.sh` and provide your username as an argument:
@@ -28,5 +28,5 @@ Install `wicd`:
 
 Finish installation by removing dotfiles dir and rebooting:
   ```
-  cd ../ && rm -rf ./dotfiles && reboot
+  cd ../ && rm -rf ./dotfiles_linux && reboot
   ```
