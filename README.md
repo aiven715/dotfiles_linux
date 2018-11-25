@@ -18,7 +18,7 @@ Go to dotfiles:
 
 Run `install.sh` and provide your username as an argument:
   ```
-  sudo ./install.sh your-username
+  ./install.sh your-username
   ```
 
 Install `wicd`:
