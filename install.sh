@@ -10,7 +10,7 @@ wget -qO- https://deb.nodesource.com/gpgkey/nodesource.gpg.key | sudo apt-key ad
 sudo apt-get update &&
 
 # Install packages
-sudo apt-get install -y unzip curl adwaita-icon-theme gnome-themes-standard gnome-themes-extra adwaita-icon-theme-full fonts-noto-color-emoji xbacklight xterm qtile ttf-ubuntu-font-family fonts-dejavu fonts-liberation2 fonts-open-sans fonts-roboto fonts-ubuntu chromium-browser vim acpi alsa-tools materia-gtk-theme light-locker lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings git sublime-text nodejs lxappearance &&
+sudo apt-get install -y unzip curl adwaita-icon-theme gnome-themes-standard gnome-themes-extra adwaita-icon-theme-full fonts-noto-color-emoji xbacklight xterm qtile ttf-ubuntu-font-family fonts-dejavu fonts-liberation2 fonts-open-sans fonts-roboto fonts-ubuntu chromium-browser vim acpi alsa-tools materia-gtk-theme light-locker lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings git alsa-utils sublime-text nodejs lxappearance &&
 
 # Create config dirs
 mkdir -p ~/.config/qtile &&
