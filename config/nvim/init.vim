@@ -11,9 +11,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 " Plug 'tpope/vim-eunuch'
 Plug 'w0rp/ale'
-" Plug 'vifm/vifm.vim', { 'on': 'EditVifm' }
 Plug 'justinmk/vim-dirvish'
-" Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
@@ -30,7 +28,8 @@ call plug#end()
 
 " Base settings
 let mapleader = ','
-set number
+set nonumber
+set relativenumber
 set updatetime=100
 set nobackup
 set noswapfile
@@ -39,14 +38,14 @@ set termguicolors
 
 " Color scheme
 set background=dark
-colorscheme OceanicNext
+colorscheme oceanic
 
 hi Normal guibg=none guifg='#CDD3DE'
 hi LineNr guibg=bg
+hi CursorLineNr guibg=bg guifg='#FAC863'
 hi VertSplit guibg='#65737E' guifg='#000000'
 hi EndOfBuffer guibg=bg guifg='#65737e'
 hi CursorLine guibg='#1b2b34'
-hi Todo guibg='#fac863' guifg=bg
 hi Directory guifg='#fac863'
 hi StatusLine guibg=fg guifg='#0e171c'
 hi StatusLineNC guibg='#4F5B66' guifg='#091013'
@@ -123,26 +122,13 @@ set statusline+=\ %p%%
 set statusline+=\%{FileTypeSL()}
 set statusline+=\ ››
 
-" NERDTree
-" nmap <silent> <leader><leader> :NERDTreeToggle<CR>
-" map <C-i> :NERDTreeToggle<CR>
-" let NERDTreeMinimalUI=1
-" let NERDTreeIgnore = ['\.DS_Store$', '.git', 'node_modules']
-" let NERDTreeShowHidden=1
-" let g:NERDTreeDirArrowExpandable=" "
-" let g:NERDTreeDirArrowCollapsible=" "
-
-" Airline
-" let g:airline_theme='minimalist'
-" No bold style in 'mode'
-" call airline#parts#define_accent('mode', 'none')
-
 " Fzf
 map <C-p> :Files<CR>
 nnoremap <leader>b :Buffers<CR>
 
 " Ale
 let g:ale_sign_error = '››'
+let g:ale_javascript_eslint_executable = '.bin/eslint'
 
 " Sign column
 set signcolumn=yes
@@ -202,6 +188,10 @@ let g:ctrlsf_mapping = {
     \ "prev" : "",
     \ }
 
-" Files
-nmap <leader>e :e<Space>%
-nmap <leader>m :!mkdir<Space>%
+" Emmet
+let g:user_emmet_settings = {
+\  'javascript.jsx' : {
+\      'extends': 'jsx',
+\      'quote_char': "'",
+\  },
+\}
